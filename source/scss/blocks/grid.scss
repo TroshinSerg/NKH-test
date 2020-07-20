@@ -1,0 +1,47 @@
+.grid {
+  font-size: 0;
+
+  &__row {
+    margin-top: -15px;
+    margin-left: -15px;
+  }
+
+  &__column {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(100% - 15px);
+    margin: 15px 0 0 15px;
+    padding: 30px 15px;
+
+    @include text(24px, 1.2);
+    font-weight: 700;
+    text-align: center;
+    background-color: $column-bg;
+    border: solid 5px $border-color;
+  }
+}
+
+
+@media screen and (min-width: $mobile-landscape-width) {
+  .grid {
+    &__column {
+      width: calc(50% - 15px);
+    }
+  }
+}
+
+@media screen and (min-width: $tablet-landscape-width) {
+  .grid {
+    &__column {
+      width: calc(33.33% - 15px);
+    }
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .grid {
+    &__column {
+      width: calc(25% - 15px);
+    }
+  }
+}
