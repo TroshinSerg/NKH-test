@@ -1,0 +1,46 @@
+.float {
+  &__row {
+    margin-top: -15px;
+    margin-bottom: 15px;
+
+    &::before,
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+
+  &__column {
+    margin-top: 15px;
+    padding: 30px 15px;
+
+    @include text(24px, 1.2);
+    font-weight: 700;
+    text-align: center;
+    background-color: $column-bg;
+    border: solid 5px $border-color;
+  }
+}
+
+@media screen and (min-width: $mobile-landscape-width) {
+  .float {
+    &__row {
+      margin-left: -15px;
+    }
+
+    &__column {
+      width: calc(50% - 15px);
+      margin-left: 15px;
+      float: left;
+    }
+  }
+}
+
+@media screen and (min-width: $tablet-landscape-width) {
+  .float {
+    &__column {
+      width: calc(25% - 15px);
+    }
+  }
+}
