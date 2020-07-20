@@ -1,0 +1,21 @@
+.pseudo-table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+
+  &__row {
+    display: table-row;
+  }
+
+  &__cell {
+    display: table-cell;
+    width: 25%;
+    padding: 16px 8px;
+
+    @include text(16px, 1.2);
+    font-weight: 700;
+    text-align: center;
+    background-color: $column-bg;
+    border: solid 5px $border-color;
+  }
+}
